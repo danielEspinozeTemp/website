@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Pure MD - Medical Billing &amp; Collections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#0b3d91",
+                        "on-secondary-container": "#55676f",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "tertiary-fixed-dim": "#7ad7c6",
+                        "surface-tint": "#345baf",
+                        "on-primary-container": "#8dadff",
+                        "surface-variant": "#cfe6f2",
+                        "on-tertiary-container": "#61beae",
+                        "primary": "#002869",
+                        "surface-container-low": "#e6f6ff",
+                        "surface-container-high": "#d5ecf8",
+                        "secondary-fixed": "#d2e6ef",
+                        "on-surface-variant": "#434652",
+                        "inverse-surface": "#1e333c",
+                        "tertiary": "#00322c",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#144296",
+                        "surface-container": "#dbf1fe",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#0b1e24",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#c7dde9",
+                        "secondary": "#4f6169",
+                        "outline-variant": "#c4c6d3",
+                        "on-primary-fixed": "#001947",
+                        "inverse-primary": "#b1c5ff",
+                        "background": "#f3faff",
+                        "surface-bright": "#f3faff",
+                        "surface-container-highest": "#cfe6f2",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "tertiary-container": "#004b42",
+                        "on-tertiary-fixed": "#00201b",
+                        "secondary-fixed-dim": "#b6cad2",
+                        "on-error": "#ffffff",
+                        "outline": "#747783",
+                        "on-secondary-fixed-variant": "#374951",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dae2ff",
+                        "on-surface": "#071e27",
+                        "surface": "#f3faff",
+                        "tertiary-fixed": "#97f3e2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d2e6ef",
+                        "inverse-on-surface": "#dff4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#071e27"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "unit": "4px",
+                        "margin": "32px",
+                        "lg": "24px",
+                        "container-max": "1440px",
+                        "xl": "40px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xxl": "64px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Manrope"],
+                        "body-lg": ["Work Sans"],
+                        "h2": ["Manrope"],
+                        "label-caps": ["Inter"],
+                        "data-tabular": ["Inter"],
+                        "h1": ["Manrope"],
+                        "body-md": ["Work Sans"],
+                        "body-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "32px", "letterSpacing": "0", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "h2": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "data-tabular": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "h1": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-layer-1 {
+            background: #ffffff;
+            border: 1px solid rgba(67, 70, 82, 0.05);
+        }
+        .tonal-layer-2 {
+            box-shadow: 0px 4px 12px rgba(69, 90, 100, 0.08);
+        }
+        .status-chip-pending {
+            background-color: rgba(210, 230, 239, 0.3);
+            color: #002869;
+        }
+        .zebra-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-secondary-fixed border-b border-secondary-container dark:border-secondary shadow-sm docked full-width top-0 z-50 sticky">
+<div class="max-w-container-max mx-auto px-margin flex justify-between items-center h-20 w-full">
+<div class="font-h3 text-h3 font-bold text-primary dark:text-primary-fixed"><img alt="Pure MD Group Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugw4abrTcM1_9324frV3Chy2Mr8hcZE7x-YkeGTvOnT6WPmjmFcpLt_vhosKFiY7FXurybOJr-EwwanRvnABNPtE9TOPaTZ9O_gsGWCufcEHf5gn2e4eRZz2e1-fwnWK6ZmTER_gPNiVCyVIE2O0xFLcWCGEo2pLQfCjPO1V3XSt8n382gVI_f3b3K8HHzgv5mRlS4rg76PH4QFc1p0GM67Aj2R3-sigDeUP1AnJH79sDlztaKwl31Z0xhc2C-h7-r7gOI_y9jNcA"></div>
+<nav class="hidden md:flex items-center gap-lg">
+<a href="home.html" class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps">
+  Home
+</a>
+<a href="services.html" class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-caps text-label-caps">
+  Services
+</a>
+<a href="pricing.html" class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps">
+  Pricing
+</a>
+<a href="index.html" class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps">
+  About Us
+</a>
+</nav> <a href="tel:+18444840704" 
+   class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-caps text-label-caps hover:opacity-80 transition-all inline-block text-center">
+  Contact Us
+</a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-xxl bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-10" data-alt="A sophisticated medical office environment with soft focus. The background shows clinical precision with modern technology equipment and a professional atmosphere in deep trust blue tones. High-end lighting creates a sense of reliability and institutional safety." style="background-image: linear-gradient(rgba(11, 61, 145, 0.8), rgba(11, 61, 145, 0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCh2IkkRGUqdgeyGy3jtOpQvuy9RYjkBS60rSV4Th_WAvWo9LqXRw3dW-k4yoR2aKlFfc6e0seCwJ5NUQ0eRYvx8hIXFMdLjt9CBP2AIrDhkqu9sj4iPGQWVSM44P3xT200o0M8zfRYuyrI4uFZOVaJ2iSmAvwwz6EG1evbTZ4A9DHxg8XqkjmOfgl85pgwE1CClEb44Erc37eI75W6wB51X6X7DrmAN7rwmBILD3FtWkL5vLWIl7XIfDIMJuxZ8Aiag7Wwgxv_kLDz'); background-size: cover; background-position: center;"></div>
+<div class="max-w-container-max mx-auto px-margin relative z-10 flex flex-col items-center text-center">
+<h1 class="font-h1 text-h1 text-on-primary mb-md max-w-4xl">Comprehensive Revenue Cycle Solutions</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed max-w-2xl mb-xl">Empowering medical providers with specialized backend support, ensuring financial health while you focus on patient care.</p>
+<div class="flex gap-md">
+<button class="bg-primary-fixed text-on-primary-fixed px-xl py-md rounded-lg font-label-caps text-label-caps hover:bg-white transition-colors">View All Services</button>
+<button class="bg-transparent border border-primary-fixed text-primary-fixed px-xl py-md rounded-lg font-label-caps text-label-caps hover:bg-primary-fixed/10 transition-colors">Get A Quote</button>
+</div>
+</div>
+</section>
+<!-- Collections Section: Bento Grid -->
+<section class="py-xxl max-w-container-max mx-auto px-margin">
+<div class="mb-xl">
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-xs">CORE SPECIALTY</span>
+<h2 class="font-h2 text-h2 text-primary">Collections Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Workers' Comp Main -->
+<div class="md:col-span-8 tonal-layer-1 p-xl rounded-xl border-l-4 border-primary">
+<div class="flex items-center gap-md mb-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="work_history">work_history</span>
+<h3 class="font-h3 text-h3 text-primary">Workers' Compensation</h3>
+</div>
+<p class="font-body-md text-secondary mb-lg">Full-scale management of WC claims with specialized focus on maximum recovery and regulatory compliance.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-lg">
+<ul class="space-y-sm">
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm">Weekly settlement &amp; Monthly aging reports</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm">Litigation &amp; WCAB appearances</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm">Filing a Declaration of Readiness (DOR)</span>
+</li>
+</ul>
+<ul class="space-y-sm">
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm">QME/MED-LEGAL accuracy (100%)</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm">Relationships with Insurers, TPAs &amp; DAs</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm">Management stats &amp; Accounting data</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Personal Injury Detail -->
+<div class="md:col-span-4 bg-primary-container p-xl rounded-xl text-on-primary flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-md mb-md">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" data-icon="clinical_notes">clinical_notes</span>
+<h3 class="font-h3 text-h3">Personal Injury</h3>
+</div>
+<p class="font-body-sm mb-lg opacity-90">Specialized AR management for PI cases, navigating complex lien reductions and legal requirements.</p>
+</div>
+<div class="space-y-sm border-t border-on-primary-container pt-md">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-[10px]">CCP-3040 SPECIALISTS</span>
+<span class="material-symbols-outlined text-on-primary-container" data-icon="verified">verified</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-[10px]">LIEN REDUCTION MGMT</span>
+<span class="material-symbols-outlined text-on-primary-container" data-icon="trending_down">trending_down</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-[10px]">COMPREHENSIVE AR</span>
+<span class="material-symbols-outlined text-on-primary-container" data-icon="bar_chart">bar_chart</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Medical Billing & Credentialing -->
+<section class="py-xxl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center">
+<div class="order-2 lg:order-1">
+<div class="mb-lg">
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-xs">EFFICIENCY &amp; ACCURACY</span>
+<h2 class="font-h2 text-h2 text-primary mb-md">Medical Billing &amp; Credentialing</h2>
+<p class="font-body-md text-secondary">We transform your fixed costs into variable ones, streamlining every step from patient charge posting to final payment.</p>
+</div>
+<div class="space-y-lg">
+<div class="flex gap-md tonal-layer-1 p-md rounded-lg">
+<div class="bg-primary rounded p-sm h-fit">
+<span class="material-symbols-outlined text-white" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-primary mb-xs"> Billing Operations</h4>
+<p class="font-body-sm text-secondary">Accurate submissions, significantly reduced denials, and compliance with the latest industry coding (ICD-10/CPT).</p>
+</div>
+</div>
+<div class="flex gap-md tonal-layer-1 p-md rounded-lg">
+<div class="bg-primary rounded p-sm h-fit">
+<span class="material-symbols-outlined text-white" data-icon="badge">badge</span>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-primary mb-xs">Credentialing Services</h4>
+<p class="font-body-sm text-secondary">Full application services for both Government and Commercial payers, ensuring your NPI submissions are error-free.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 rounded-xl overflow-hidden tonal-layer-2 aspect-video bg-cover bg-center" data-alt="A professional accountant or billing specialist in a clinical setting reviewing complex financial data on multiple modern monitors. The workspace is clean, organized, and reflects the efficiency and precision of the medical billing industry. The lighting is crisp and cool, emphasizing accuracy and transparency." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnxAEYI0xU55QlqmvdtZpztyoEn3hpgCjC7m8k7BYcMGI8o4PkNgOyh9hfnNv6-z3eWNhJK1NM2aYtFFcOr-6dosdPCzOj56PMvZ7krWgXXCT11UY9rOUWO74Xt8uYo_Lkj9MhdQjGCibmV5qRlPgV0-nbUQirp04ApLowpN_OZOC9WswaCyRy21fB-8cdYI73sDSU1mGMJmO8_Wyt3S1Ue1GGkc3GyoHywgQa1Y_19_T3ac5k4jCgR2MP-8BpvDjzVgWOVw4RyTCb')"></div>
+</div>
+</section>
+<!-- Virtual Assistants & VOB -->
+<section class="py-xxl max-w-container-max mx-auto px-margin">
+<div class="text-center mb-xl">
+<h2 class="font-h2 text-h2 text-primary">Office Support &amp; Verification</h2>
+<p class="font-body-md text-secondary max-w-2xl mx-auto mt-md">Scale your operations with high-quality backend staff dedicated to your practice's administrative success.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="tonal-layer-1 p-xl rounded-xl text-center group hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-5xl text-primary mb-md" data-icon="support_agent">support_agent</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Virtual Assistants</h3>
+<p class="font-body-sm text-secondary mb-md">Dedicated backend staff trained in medical office protocols to handle calls, scheduling, and admin tasks.</p>
+<span class="status-chip-pending px-md py-xs rounded-full font-label-caps text-[10px]">HIGH-QUALITY STAFFING</span>
+</div>
+<div class="tonal-layer-1 p-xl rounded-xl text-center group hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-5xl text-primary mb-md" data-icon="verified_user">verified_user</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Verification of Benefits</h3>
+<p class="font-body-sm text-secondary mb-md">Prevent non-payment before service. We verify patient coverage and benefit levels with insurance carriers instantly.</p>
+<span class="status-chip-pending px-md py-xs rounded-full font-label-caps text-[10px]">VOB ACCURACY</span>
+</div>
+<div class="tonal-layer-1 p-xl rounded-xl text-center group hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-5xl text-primary mb-md" data-icon="task_alt">task_alt</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Prior Authorization</h3>
+<p class="font-body-sm text-secondary mb-md">Handling the complex paperwork and follow-up needed for procedure approvals to ensure reimbursement.</p>
+<span class="status-chip-pending px-md py-xs rounded-full font-label-caps text-[10px]">REDUCED FRICTION</span>
+</div>
+</div>
+</section>
+<!-- Value Props: The Pure MD Advantage -->
+<section class="py-xl bg-primary">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-xl">
+<div class="text-center text-on-primary">
+<div class="font-h2 text-h2 mb-xs">0%</div>
+<div class="font-label-caps text-label-caps opacity-80 uppercase">Sign-Up Fees</div>
+</div>
+<div class="text-center text-on-primary">
+<div class="font-h2 text-h2 mb-xs">0$</div>
+<div class="font-label-caps text-label-caps opacity-80 uppercase">Hidden Charges</div>
+</div>
+<div class="text-center text-on-primary">
+<div class="font-h2 text-h2 mb-xs">0$</div>
+<div class="font-label-caps text-label-caps opacity-80 uppercase">Upfront Fees</div>
+</div>
+<div class="text-center text-on-primary">
+<div class="font-h2 text-h2 mb-xs">100%</div>
+<div class="font-label-caps text-label-caps opacity-80 uppercase">Performance Based</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xxl bg-surface-container-highest">
+<div class="max-w-4xl mx-auto px-margin text-center">
+<h2 class="font-h2 text-h2 text-primary mb-md">Ready to Streamline Your Practice?</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-xl">Contact us today for a free consultation and see how we can reduce your operational costs by up to 80%.</p>
+<div class="tonal-layer-1 p-xl rounded-xl grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<div class="flex items-center gap-md text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-h3 text-h3 text-[20px]">info@puremdgroup.com</span>
+</div>
+<div class="flex items-center gap-md text-primary">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="font-h3 text-h3 text-[20px]">(844) 484-0704</span>
+</div>
+</div>
+<div>
+<button class="w-full bg-primary text-on-primary py-md rounded-lg font-h3 text-h3 text-[18px] hover:opacity-90 transition-all">Schedule Consultation</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface py-xl">
+<div class="max-w-container-max mx-auto px-margin grid grid-cols-1 md:grid-cols-3 gap-lg w-full">
+<div class="flex flex-col gap-md">
+<img alt="Pure MD Logo" class="h-10 w-auto self-start" src="https://lh3.googleusercontent.com/aida/ADBb0ugw4abrTcM1_9324frV3Chy2Mr8hcZE7x-YkeGTvOnT6WPmjmFcpLt_vhosKFiY7FXurybOJr-EwwanRvnABNPtE9TOPaTZ9O_gsGWCufcEHf5gn2e4eRZz2e1-fwnWK6ZmTER_gPNiVCyVIE2O0xFLcWCGEo2pLQfCjPO1V3XSt8n382gVI_f3b3K8HHzgv5mRlS4rg76PH4QFc1p0GM67Aj2R3-sigDeUP1AnJH79sDlztaKwl31Z0xhc2C-h7-r7gOI_y9jNcA"/>
+<p class="font-body-sm text-secondary dark:text-secondary-fixed max-w-xs">A full-scale Medical Billing &amp; Collections Services Company dedicated to professional revenue cycle management.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed mb-sm">Contact Info</h4>
+<div class="text-secondary dark:text-secondary-fixed font-body-sm">(844) 484-0704</div>
+<div class="text-secondary dark:text-secondary-fixed font-body-sm">info@puremdgroup.com</div>
+<div class="text-secondary dark:text-secondary-fixed font-body-sm">100 N Brand Blvd S-522, Glendale, CA 91203</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed mb-sm">Legal</h4>
+<a class="text-secondary dark:text-secondary-fixed font-body-sm hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary-fixed font-body-sm hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-secondary dark:text-secondary-fixed font-body-sm hover:underline transition-all" href="#">Compliance Disclaimers</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin pt-xl mt-xl border-t border-secondary-container dark:border-secondary">
+<p class="font-body-sm text-secondary dark:text-secondary-fixed text-center">© 2024 Pure MD Medical Billing &amp; Collections. All rights reserved. Registered HIPAA Compliant Entity.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pure MD | Maximized Revenue. Minimized Stress.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#144296",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#d2e6ef",
+                    "on-surface-variant": "#434652",
+                    "outline": "#747783",
+                    "surface-tint": "#345baf",
+                    "surface-container-highest": "#cfe6f2",
+                    "inverse-on-surface": "#dff4ff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "primary": "#002869",
+                    "tertiary": "#00322c",
+                    "primary-container": "#0b3d91",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "on-secondary-container": "#55676f",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f3faff",
+                    "surface-dim": "#c7dde9",
+                    "tertiary-fixed": "#97f3e2",
+                    "on-background": "#071e27",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#cfe6f2",
+                    "surface-container": "#dbf1fe",
+                    "background": "#f3faff",
+                    "secondary-fixed-dim": "#b6cad2",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#1e333c",
+                    "outline-variant": "#c4c6d3",
+                    "on-tertiary-fixed": "#00201b",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#e6f6ff",
+                    "on-tertiary-container": "#61beae",
+                    "primary-fixed": "#dae2ff",
+                    "on-primary-container": "#8dadff",
+                    "secondary": "#4f6169",
+                    "tertiary-fixed-dim": "#7ad7c6",
+                    "on-secondary-fixed-variant": "#374951",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#d5ecf8",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#004b42",
+                    "on-primary-fixed": "#001947",
+                    "surface-bright": "#f3faff",
+                    "on-secondary-fixed": "#0b1e24",
+                    "inverse-primary": "#b1c5ff",
+                    "on-surface": "#071e27",
+                    "secondary-fixed": "#d2e6ef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "xl": "40px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "container-max": "1440px",
+                    "sm": "8px",
+                    "xxl": "64px"
+            },
+            "fontFamily": {
+                    "data-tabular": ["Inter"],
+                    "h3": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "body-lg": ["Work Sans"],
+                    "body-md": ["Work Sans"],
+                    "label-caps": ["Inter"],
+                    "body-sm": ["Work Sans"],
+                    "h2": ["Manrope"]
+            },
+            "fontSize": {
+                    "data-tabular": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "h3": ["24px", {"lineHeight": "32px", "letterSpacing": "0", "fontWeight": "600"}],
+                    "h1": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="bg-surface dark:bg-on-secondary-fixed border-b border-secondary-container dark:border-secondary shadow-sm docked full-width top-0 z-50 sticky">
+<div class="max-w-container-max mx-auto px-margin flex justify-between items-center h-20 w-full">
+<div class="font-h3 text-h3 font-bold text-primary dark:text-primary-fixed"><img alt="Pure MD Group Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugw4abrTcM1_9324frV3Chy2Mr8hcZE7x-YkeGTvOnT6WPmjmFcpLt_vhosKFiY7FXurybOJr-EwwanRvnABNPtE9TOPaTZ9O_gsGWCufcEHf5gn2e4eRZz2e1-fwnWK6ZmTER_gPNiVCyVIE2O0xFLcWCGEo2pLQfCjPO1V3XSt8n382gVI_f3b3K8HHzgv5mRlS4rg76PH4QFc1p0GM67Aj2R3-sigDeUP1AnJH79sDlztaKwl31Z0xhc2C-h7-r7gOI_y9jNcA"></div>
+<nav class="hidden md:flex items-center gap-lg">
+<a href="home.html" class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-caps text-label-caps">
+  Home
+</a>
+<a href="services.html" class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps">
+  Services
+</a>
+<a href="pricing.html" class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps">
+  Pricing
+</a>
+<a href="index.html" class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps">
+  About Us
+</a>
+</nav> <a href="tel:+18444840704" 
+   class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-caps text-label-caps hover:opacity-80 transition-all inline-block text-center">
+  Contact Us
+</a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-xxl pb-xxl lg:pt-32 lg:pb-48">
+<div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_30%,#cfe6f2_0%,#f3faff_100%)]"></div>
+<div class="max-w-container-max mx-auto px-margin relative z-10 flex flex-col lg:flex-row items-center gap-xxl">
+<div class="flex-1 text-center lg:text-left">
+<span class="font-label-caps text-label-caps text-primary-container bg-primary-fixed px-md py-xs rounded-full mb-md inline-block">PERFORMANCE-BASED MODEL</span>
+<h1 class="font-h1 text-h1 text-primary mb-lg leading-tight lg:text-6xl">Maximized Revenue.<br/>Minimized Stress.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl">Focus on patient care while we handle your full revenue cycle. Reduce costs by up to 80% with our elite billing, collection, and virtual staffing solutions.</p>
+<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-md">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@puremdgroup.com&su=Inquiry%20About%20Services&body=Good%20morning%2Fafternoon%20PureMD%20Group%2C%0A%0AI%20would%20like%20to%20know%20about%20your%20services.%0A%0ARegards%2C"></a><button  class="bg-primary text-on-primary px-xl py-md rounded-lg font-h3 text-h3 shadow-sm hover:opacity-90 transition-all">Get Started Today</button>
+</a>
+<button class="bg-secondary-container text-on-secondary-container px-xl py-md rounded-lg font-h3 text-h3 hover:bg-surface-container-highest transition-all">View Pricing</button>
+</div>
+</div>
+<div class="flex-1 relative w-full max-w-xl">
+<div class="bg-white p-xl rounded-xl shadow-xl border border-outline-variant relative overflow-hidden">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-xs">PROJECTED REVENUE INCREASE</p>
+<p class="font-h1 text-h1 text-primary">+24.8%</p>
+</div>
+<div class="flex gap-xs items-end h-20">
+<div class="w-8 bg-secondary-container h-8 rounded-sm"></div>
+<div class="w-8 bg-secondary-container h-12 rounded-sm"></div>
+<div class="w-8 bg-primary h-20 rounded-sm"></div>
+</div>
+</div>
+<div class="space-y-md">
+<div class="flex items-center justify-between p-md bg-surface rounded-lg">
+<span class="font-body-md text-on-surface">Average Cost Reduction</span>
+<span class="font-data-tabular text-data-tabular text-tertiary">80%</span>
+</div>
+<div class="flex items-center justify-between p-md bg-surface rounded-lg">
+<span class="font-body-md text-on-surface">Submission Accuracy</span>
+<span class="font-data-tabular text-data-tabular text-tertiary">99%</span>
+</div>
+</div>
+</div>
+<!-- Glassmorphism accent -->
+<div class="absolute -bottom-6 -right-6 bg-white/60 backdrop-blur-md p-lg rounded-lg border border-white/40 shadow-lg hidden md:block">
+<div class="flex items-center gap-md">
+<div class="bg-tertiary-fixed p-sm rounded-full">
+<span class="material-symbols-outlined text-on-tertiary-fixed" data-weight="fill">verified</span>
+</div>
+<p class="font-label-caps text-label-caps text-primary">HIPAA COMPLIANT ENTITY</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-primary text-on-primary py-lg">
+<div class="max-w-container-max mx-auto px-margin flex flex-wrap justify-center md:justify-between items-center gap-lg">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">No Sign-Up Fees</span>
+</div>
+<div class="h-4 w-px bg-on-primary/20 hidden md:block"></div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">No Upfront Costs</span>
+</div>
+<div class="h-4 w-px bg-on-primary/20 hidden md:block"></div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim">verified_user</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">HIPAA Compliant</span>
+</div>
+<div class="h-4 w-px bg-on-primary/20 hidden md:block"></div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim">payments</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Performance-Based Model</span>
+</div>
+</div>
+</section>
+<!-- Value Proposition Grid -->
+<section class="py-xxl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-xxl">
+<h2 class="font-h2 text-h2 text-primary mb-md">Our Three Main Pillars</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl mx-auto">Comprehensive support designed to eliminate back-office friction and maximize provider profitability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Billing -->
+<div class="bg-white p-xl rounded-xl border border-outline-variant hover:shadow-lg transition-shadow group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center mb-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-on-primary">receipt_long</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-md">Medical Billing</h3>
+<p class="font-body-md text-on-surface-variant mb-xl">Accurate submissions and reduced denials for WC, HMO, PPO, and Private claims starting at just 4.99%.</p>
+<ul class="space-y-sm mb-xl">
+<li class="flex items-start gap-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">arrow_forward</span>
+                            Benefit verification &amp; Prior Auth
+                        </li>
+<li class="flex items-start gap-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">arrow_forward</span>
+                            Streamlined reimbursement processes
+                        </li>
+</ul>
+<a class="text-primary font-label-caps text-label-caps flex items-center gap-xs hover:gap-md transition-all" href="#">LEARN MORE <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Collections -->
+<div class="bg-white p-xl rounded-xl border border-outline-variant hover:shadow-lg transition-shadow group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center mb-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-on-primary">account_balance_wallet</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-md">WC &amp; PI Collections</h3>
+<p class="font-body-md text-on-surface-variant mb-xl">Aggressive yet professional recovery for Workers' Comp and Personal Injury claims with expert negotiation.</p>
+<ul class="space-y-sm mb-xl">
+<li class="flex items-start gap-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">arrow_forward</span>
+                            CCP-3040 &amp; WCAB Appearances
+                        </li>
+<li class="flex items-start gap-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">arrow_forward</span>
+                            100% accuracy on QME collections
+                        </li>
+</ul>
+<a class="text-primary font-label-caps text-label-caps flex items-center gap-xs hover:gap-md transition-all" href="#">LEARN MORE <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Virtual Assistance -->
+<div class="bg-white p-xl rounded-xl border border-outline-variant hover:shadow-lg transition-shadow group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center mb-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-on-primary">support_agent</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-md">Virtual Assistance</h3>
+<p class="font-body-md text-on-surface-variant mb-xl">High-quality medical office backend staff to handle verification and admin tasks, starting at $1500.</p>
+<ul class="space-y-sm mb-xl">
+<li class="flex items-start gap-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">arrow_forward</span>
+                            Round-the-clock support
+                        </li>
+<li class="flex items-start gap-xs text-body-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">arrow_forward</span>
+                            VOB &amp; Credentialing services
+                        </li>
+</ul>
+<a class="text-primary font-label-caps text-label-caps flex items-center gap-xs hover:gap-md transition-all" href="#">LEARN MORE <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Previews / Asymmetric Layout -->
+<section class="py-xxl">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center mb-xxl">
+<div>
+<span class="font-label-caps text-label-caps text-secondary mb-sm inline-block">EXPERT COLLECTIONS</span>
+<h2 class="font-h2 text-h2 text-primary mb-lg">Workers' Compensation Mastery</h2>
+<p class="font-body-md text-on-surface-variant mb-lg">We maintain strong relationships with insurance companies, TPAs, and District Attorneys to expedite your payments. From weekly settlement reports to WCAB appearances and filing a DOR, we handle every detail.</p>
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-surface p-md rounded-lg">
+<p class="font-h3 text-h3 text-primary mb-xs">100%</p>
+<p class="font-label-caps text-label-caps text-secondary">QME Accuracy</p>
+</div>
+<div class="bg-surface p-md rounded-lg">
+<p class="font-h3 text-h3 text-primary mb-xs">Weekly</p>
+<p class="font-label-caps text-label-caps text-secondary">Aging Reports</p>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl h-96">
+<div class="absolute inset-0 bg-primary/10"></div>
+<img alt="Financial analysis and data" class="w-full h-full object-cover" data-alt="A clean, professional macro shot of a financial advisor's desk featuring a modern tablet displaying medical billing charts and data visualizations. Soft, clinical daylight streams across the workspace, highlighting a crisp white and slate gray color palette. The mood is precise, secure, and highly organized, reflecting institutional trust and modern corporate efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7sV73hSh3Oujic0xUPWvGdvyDjsPtOBcRPdwpFDb1Ud74lhnzpf3JtxhjJMFv7cn9ZxqogdBWHE-_3GHcUJzllhMtZuedZxU-sFtQzTRrXMdPAO2hkgMGsgwVAtLmJ9CLaZRQb8xhdKoPzntrwoCR4o-DJtGJ7nj-vG6m0Cqg6VyS0llfVNs9XtKyby7QEvxjF03VIZ7Mjh6bqB6ALIAIjOe6Vy-w8-EzJ6w-wrW0pGEFZ5sJRw1aMsw1uVuICFE1h_8n7Reg-Rgo"/>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center">
+<div class="order-2 lg:order-1 relative rounded-xl overflow-hidden shadow-2xl h-96">
+<div class="absolute inset-0 bg-primary/10"></div>
+<img alt="Personal Injury Law Concept" class="w-full h-full object-cover" data-alt="An elegant, modern corporate setting depicting a meeting room where legal and medical financial documents are being reviewed under soft, diffused lighting. The scene focuses on the clarity and transparency of data with a color scheme of deep navy blues and pristine whites. The atmosphere conveys clinical precision and professional reliability in handling personal injury recovery cycles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSbM1xa14_rMD69sfJqZxY0YPXXLIPiGGvRFa_W_HODBStdorvP7XrfyjdpCWMyq-OocgO7EW-aKDQvkew4xUsLNyYe_yUoTCoaAzcSR1qj0RXC_KuCcGO0T4V4QP1c17Kyan5EF87zUZ78782BwdC0f5YVYPJgfHnRH2qoTUaBR_2B93oP6nnkZ7wMIt_J2t3LI-tC_55KfrB9HWAog9WtcnWXgOKJppZ2CmJjKuD5hRgCudT8N3lkEh1M8i_CaSm5xQzWO_vcngf"/>
+</div>
+<div class="order-1 lg:order-2">
+<span class="font-label-caps text-label-caps text-secondary mb-sm inline-block">LEGAL BILLING PRECISION</span>
+<h2 class="font-h2 text-h2 text-primary mb-lg">Personal Injury Recovery</h2>
+<p class="font-body-md text-on-surface-variant mb-lg">Specialized CCP-3040 collections and comprehensive AR management for PI claims. We manage lien reduction requests and provide custom monthly reports to ensure complete transparency.</p>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="font-body-md text-on-surface">Custom Monthly AR Reporting</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">handshake</span>
+<span class="font-body-md text-on-surface">Lien Reduction Request Management</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="font-body-md text-on-surface">Timely AR Follow-up Protocols</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Bento Grid -->
+<section class="py-xxl bg-surface">
+<div class="max-w-container-max mx-auto px-margin">
+<h2 class="font-h2 text-h2 text-primary text-center mb-xxl">Why Providers Choose Pure MD</h2>
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-8 bg-white p-xl rounded-xl border border-outline-variant relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-h3 text-h3 text-primary mb-md">Clinical Precision in Billing</h3>
+<p class="font-body-md text-on-surface-variant mb-lg max-w-lg">Our 99% accuracy rate is not an accident—it's the result of rigorous compliance with the latest industry regulations and a performance-based model that aligns our success with yours.</p>
+<div class="flex gap-xl">
+<div>
+<p class="font-h1 text-h1 text-primary">99%</p>
+<p class="font-label-caps text-label-caps text-secondary">SUBMISSION ACCURACY</p>
+</div>
+<div>
+<p class="font-h1 text-h1 text-primary">80%</p>
+<p class="font-label-caps text-label-caps text-secondary">COST REDUCTION</p>
+</div>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-weight="fill">precision_manufacturing</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-primary text-on-primary p-xl rounded-xl">
+<span class="material-symbols-outlined text-4xl mb-lg">hub</span>
+<h3 class="font-h3 text-h3 mb-md">Full-Scale RCM</h3>
+<p class="font-body-sm">From benefit verification to litigation appearances, we handle the entire spectrum of revenue cycle management.</p>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-highest p-xl rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-4xl mb-lg text-primary">history_toggle_off</span>
+<h3 class="font-h3 text-h3 text-primary mb-md">24/7 Support</h3>
+<p class="font-body-sm text-on-surface-variant">Round-the-clock customer support ensuring your practice never misses a billing opportunity.</p>
+</div>
+<div class="col-span-12 md:col-span-8 bg-white p-xl rounded-xl border border-outline-variant">
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-primary mb-md">Scalable Backend Staff</h3>
+<p class="font-body-sm text-on-surface-variant">Convert your fixed office costs into variable costs with our scalable virtual assistant solutions starting at $1500.</p>
+</div>
+<div class="flex-shrink-0 bg-surface p-md rounded-lg border border-outline-variant">
+<p class="font-label-caps text-label-caps text-secondary mb-xs">STARTING FROM</p>
+<p class="font-h2 text-h2 text-primary">$1500<span class="text-body-sm font-normal">/mo</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xxl bg-white border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin text-center">
+<h2 class="font-h2 text-h2 text-primary mb-lg">Ready to Optimize Your Revenue Cycle?</h2>
+<p class="font-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto">Join the hundreds of providers who have eliminated billing stress and maximized their collections with Pure MD.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-md">
+<button class="bg-primary text-on-primary px-xxl py-md rounded-lg font-h3 text-h3 shadow-sm hover:opacity-90 transition-all">Get Your Free Quote</button>
+<a class="flex items-center justify-center gap-sm bg-surface-container text-on-surface px-xxl py-md rounded-lg font-h3 text-h3 border border-outline-variant hover:bg-surface-container-high transition-all" href="tel:8444840704">
+<span class="material-symbols-outlined">call</span>
+                    (844) 484-0704
+                </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface py-xl">
+<div class="max-w-container-max mx-auto px-margin py-xl grid grid-cols-1 md:grid-cols-3 gap-lg w-full">
+<div class="space-y-md">
+<img alt="Pure MD Logo" class="h-10 w-auto mb-md" src="https://lh3.googleusercontent.com/aida/ADBb0ugw4abrTcM1_9324frV3Chy2Mr8hcZE7x-YkeGTvOnT6WPmjmFcpLt_vhosKFiY7FXurybOJr-EwwanRvnABNPtE9TOPaTZ9O_gsGWCufcEHf5gn2e4eRZz2e1-fwnWK6ZmTER_gPNiVCyVIE2O0xFLcWCGEo2pLQfCjPO1V3XSt8n382gVI_f3b3K8HHzgv5mRlS4rg76PH4QFc1p0GM67Aj2R3-sigDeUP1AnJH79sDlztaKwl31Z0xhc2C-h7-r7gOI_y9jNcA"/>
+<p class="font-body-sm text-secondary dark:text-secondary-fixed">Pure MD is a full-scale Medical Billing &amp; Collections Services Company dedicated to providing proficient services to Medical Providers.</p>
+<div class="flex gap-md">
+<a class="text-primary hover:opacity-70" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-primary hover:opacity-70" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+<div class="space-y-md">
+<p class="font-label-caps text-label-caps text-primary dark:text-primary-fixed font-bold">Contact Info</p>
+<ul class="space-y-sm">
+<li class="font-body-sm text-secondary dark:text-secondary-fixed flex items-center gap-sm">
+<span class="material-symbols-outlined text-sm">phone</span>
+                        (844) 484-0704
+                    </li>
+<li class="font-body-sm text-secondary dark:text-secondary-fixed flex items-center gap-sm">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        info@puremdgroup.com
+                    </li>
+<li class="font-body-sm text-secondary dark:text-secondary-fixed flex items-center gap-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        100 N Brand Blvd S-522, Glendale, CA 91203
+                    </li>
+</ul>
+</div>
+<div class="space-y-md">
+<p class="font-label-caps text-label-caps text-primary dark:text-primary-fixed font-bold">Quick Links</p>
+<ul class="grid grid-cols-2 gap-sm">
+<li><a class="font-body-sm text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Compliance</a></li>
+<li><a class="font-body-sm text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Billing Services</a></li>
+<li><a class="font-body-sm text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Collections</a></li>
+<li><a class="font-body-sm text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">VAs</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin border-t border-outline-variant pt-lg mt-lg text-center">
+<p class="font-body-sm text-secondary dark:text-secondary-fixed opacity-60">© 2024 Pure MD Medical Billing &amp; Collections. All rights reserved. Registered HIPAA Compliant Entity.</p>
+</div>
+</footer>
+</body></html>
